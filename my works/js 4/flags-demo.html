@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flag Demo</title>
+</head>
+
+<body>
+    <table align="center" width="70%">
+        <tr>
+            <td colspan="2">THIS IS DYNAMIC DEMO FOR COUNTERIES FLAG</td>
+        </tr>
+        <tr>
+            <td>
+                <select id="countryList" onchange="uploadImage()">
+                    <option>Pakistan</option>
+                    <option>India</option>
+                    <option>China</option>
+                    <option>Turkey</option>
+                    <option>UAE</option>
+                </select>
+            </td>
+            <td>
+                <img src="flag/dummy.jpg" height='100px' id="flag" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Photo: <input type="file" accept="image/*" id='imgFile' onchange="loadFile()">
+            </td>
+            <td>
+                <img src="flag/dummy.jpg" height='100px' id="myfile" />
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
+<script>
+    function uploadImage() {
+        let countries = {
+            Pakistan: "flag/Pakistan.jpg",
+            India: "flag/India.jpg",
+            China: "flag/China.jpg",
+            Turkey: "flag/Turkey.jpg",
+            UAE: "flag/UAE.jpg"
+        };
+        let c = document.getElementById('countryList').value;
+        console.log(c);
+        for (var i in countries) {
+            if (c == i) {
+                document.getElementById('flag').src = countries[i];
+            }
+        }
+      console.log(countries[i])
+    }
+    function loadFile() {
+        // let a=document.getElementById('imgFile').value;
+        // console.log(a);
+        var image = document.getElementById('myfile');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>

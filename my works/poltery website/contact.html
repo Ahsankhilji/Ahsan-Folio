@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <nav class="navbar background">
+        <div class="navbar-logo">
+            <a href="#">
+                <img src="img/image.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <div class="navbar-toggle" id="navbarToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div class="content">
+        <!-- Your page content goes here -->
+    </div>
+    <!-- header -->
+    <h1>Contact us</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55543.29749014032!2d71.58723486015765!3d29.532209228798546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b9ee4e335c893%3A0x3cfb6dc1093330a9!2sLodhr%C4%81n%2C%20Lodhran%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1701707322477!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+    <h1>Form</h1>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <!-- Your website content goes here -->
+    <div class="footer">
+        <p>&copy; 2023 Egg <font color="#BE513C">&</font> Craft . All rights reserved.</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>enter a number and del</h1>
+            <input type="text" id="userinput">
+            <button onclick="change()">Click</button>
+        </div>
+        <div>
+            <ul id="parent_list">
+            </ul>
+        </div>
+
+        <script>
+            let arry = [];
+            function change() {
+
+                let userval = document.getElementById("userinput").value;
+                arry.push(userval);
+
+                let html = '';
+                arry.map((xyz, index) => {
+                    html += "<li>" + xyz + "</li>";
+                    html += `<button onClick='del(${index})'>Del</button>`;
+                });
+                document.getElementById("parent_list").innerHTML = html;
+            }
+
+
+            
+            function del(index) {
+
+                arry.splice(index, 1)
+
+                let html = '';
+                arry.map((xyz, index) => {
+                    html += "<li>" + xyz + "</li>";
+                    html += `<button onClick='del(${index})'>Del</button>`;
+                });
+                document.getElementById("parent_list").innerHTML = html;
+            }
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

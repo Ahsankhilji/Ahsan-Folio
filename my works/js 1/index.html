@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Profit and Loss program</h1>
+    <input type="number" id="cost" placeholder="Enter Cost Price">
+    <br><br>
+    <input type="number" id="sale" placeholder=" Enter Sale price">
+    <br>
+    <br>
+    <input type="button" value="clik me" onclick="profit()">
+
+<br><br><br><br>
+<h1>Gross Salary</h1>
+<br>
+    <input type="number" id="gross" placeholder="Gross Salary">
+    <br><br>
+    <input type="button" value="clik me" onclick=salary()>
+    <br><br><br><br>
+    <h1>Count Total Number Of Notes</h1>
+    <input type="number" id="amounts" placeholder="Enter any Amount">
+    <br><br>
+    <input type="button" value="clik me" onclick="notes()">
+    <br><br><br><br>
+    <h1>Total Electricity Bill</h1>
+    <input type="number" id="u">
+    <br><br>
+    <input type="button" value="clik me" onclick="electricityunit()">
+
+</body>
+<script>
+    function profit(){
+        var c=document.getElementById("cost").value
+        var s=document.getElementById("sale").value
+        if(c-s>0){
+            alert("loss")
+        }
+        else if(c-s<0){
+            alert("profit")} 
+    }
+
+
+    function salary(){
+        var basic=parseInt(document.getElementById("gross").value)
+        if(basic<=10000){
+            var hra=(20*basic)/100
+            var da=(80*basic)/100
+           var g=basic+da+hra
+           alert(g)
+        }
+        if(basic<=20000){
+            var hra=(25*basic)/100
+            var da=(90*basic)/100
+           var g=basic+da+hra
+           alert(g)
+        }
+        if(basic>20000){
+            var hra=(30*basic)/100
+            var da=(95*basic)/100
+           var g=basic+da+hra
+           alert(g)
+        }  
+    }
+
+    function notes(){
+        var amount=document.getElementById('amounts').value
+        var fiveTH=parseInt(amount/5000)
+        var amount=parseInt(amount%5000)
+
+        var oneTH=parseInt(amount/1000)
+        var amount=parseInt(amount%1000)
+
+        var fiveHN=parseInt(amount/500)
+        var amount=parseInt(amount%500)
+
+        var hundered=parseInt(amount/100)
+        var amount=parseInt(amount%100)
+
+        var seventyfive=parseInt(amount/75)
+        var amount=parseInt(amount%75)
+
+        var fifty=parseInt(amount/50)
+        var amount=parseInt(amount%50)
+
+        var twenty=parseInt(amount/20)
+        var amount=parseInt(amount%20)
+
+        var ten=parseInt(amount/10)
+        var amount=parseInt(amount%10)
+
+        var five=parseInt(amount/5)
+        var amount=parseInt(amount%5)
+
+        var two=parseInt(amount/2)
+        var amount=(amount%2)
+
+        var one=parseInt(amount/1)
+        var amount=parseInt(amount%1)
+
+        alert("5000 Note  :  "+fiveTH)
+        alert("1000 Note  :  "+oneTH)
+        alert("500 Note  :  "+fiveHN)
+        alert("100 Note  :  "+hundered)
+        alert("75 Note  :  "+seventyfive)
+        alert("50 Note  :  "+fifty)
+        alert("20 Note  :  "+twenty)
+        alert("10 Note  :  "+ten)
+        alert("5 coin  :  "+five)
+        alert("2 coin  :  "+two)
+        alert("1 coin  :  "+one)
+    
+    }
+    function electricityunit(){
+        var unit=parseInt(document.getElementById("u").value)
+        if(unit<=50){
+        var a=(unit*2)
+        alert(a)
+    }
+    else if(unit<=100){
+        var a=(unit*5)
+        alert(a)
+    }
+    else if(unit>=250){
+        var a=(unit*10)
+        alert(a)
+    }
+    // else if(unit>250){
+    //     var d=(unit*10)
+    //     console.log(d)
+    // }
+    else if(a>20000){
+    var a=(unit*20/100)
+    alert(a)
+    }
+    }
+</script>
+</html>

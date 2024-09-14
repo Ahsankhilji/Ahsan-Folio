@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>mini calculator</h1>
+    <table class="st">
+    <div>
+        <input type="number" id="num1">
+        <select id="opr">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="number" id="num2">
+    </div>
+    <br><br>
+    <div> 
+        <input type="button" name="button" value="result" onClick="result()"/>
+    </div>
+</table>
+
+</body>
+
+</html>
+<script>
+    function result(){
+        var x = parseInt(document.getElementById('num1').value);
+        var y = parseInt(document.getElementById('num2').value);
+        var opr = document.getElementById('opr').value;
+
+        var result = '';
+        if (opr == '+') {
+            result = x + y;
+        }
+        else if (opr == '-') {
+            result = x - y;
+        }
+        else if (opr == '*') {
+            result = x * y;
+        }
+        else if (opr == '/') {
+            result = x / y;
+        }
+        alert(result);
+    }
+</script>

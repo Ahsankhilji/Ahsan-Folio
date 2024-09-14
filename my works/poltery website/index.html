@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Sticky Navbar</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar background">
+        <div class="navbar-logo">
+            <a href="#">
+                <img src="img/image.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <div class="navbar-toggle" id="navbarToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div class="content">
+        <!-- Your page content goes here -->
+    </div>
+    <!-- header -->
+    <section>
+        <div class="header background">
+            <div class="header-text">
+                <h3>Egg <font color="#BE513C">&</font> Craft </h3>
+                <br>
+                <p><i class="sm-text">Where nature's perfection meets culinary delight. Our eggs, a testament  to quality and flavor, redefine your culinary experience. <br> This delicate and intricate form of art showcases the versatility of eggs <br> as a canvas for imaginative designs.                </i>
+                </p>
+                <a href="#" class="button"> <i>Learn more</i></a>
+            </div>
+    </section>
+
+    <section>
+        <h1>Poultry Products</h1>
+        <div class="container1">
+            <div class=" responsive-div ">
+              <h2>ACTIGEN</h2>
+              <p>Actigen provides a cost-effective means of maintaining gut health and integrity to support overall performance.</p>
+            </div>
+        
+            <div class="responsive-div">
+              <h2>SYNERGEN</h2>
+              <p>Synergen is a product of the solid state fermentation  is a product of the solid state fermentation of Aspergillus niger.</p>
+            </div>
+        
+            <div class="responsive-div">
+              <h2>BLOPLEX</h2>
+              <p>Bioplex offers a range of trace minerals that provide mineral nutrition in a form as close to nature as possible.
+                View All</p>
+            </div>
+          </div>
+    </section>
+
+    <section>
+        <h1>Poultry Articles</h1>
+<div class="container">
+    <div class="card">
+      <img src="./img/Hero image for broiler breeder blog 1200x675.jpg" alt="Image 1">
+      <div class="card-content">
+        <h2>Understanding mycotoxin risk and the impact on egg and chick quality</h2>
+<p>By Paula McCooey, Poultry Manager, Alltech Ireland Mycotoxins are naturally occurring, toxic secondary metabolites produced by fungi that can be found in feedstuffs such as cereal grains and their byproducts. Mycotoxins can occur prior to harvest as well as after harvest, during transport and during storage.  Once these metabolites are...</p>
+    </div>
+    </div>
+
+    <div class="card">
+      <img src="./img/Blog lead image 1200x675_4.png" alt="Image 2">
+      <div class="card-content">
+        <h2>2023 harvest: Early insights into Europe’s mycotoxin landscape</h2>
+<p>The European Commission has announced that by the end of 2023, a legislative proposal will be presented to phase out and prohibit the use of cages for several farm animals. Cage-free egg production systems can be broken into three categories, each with its own set of standards: organic, free-range and barn....</p>
+    </div>
+    </div>
+    <div class="card">
+        <img src="./img/Untitled design (7).png" alt="Image 3">
+        <div class="card-content">
+          <h2>Trends and challenges with cage-free egg production</h2>
+<p>The European Commission has announced that by the end of 2023, a legislative proposal will be presented to phase out and prohibit the use of cages for several farm animals. Cage-free egg production systems can be broken into three categories, each with its own set of standards: organic, free-range and barn....</p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- contact section -->
+    <h1>Contact</h1>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <!-- Your website content goes here -->
+    <div class="footer">
+        <p>&copy; 2023 Egg <font color="#BE513C">&</font> Craft . All rights reserved.</p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
